@@ -38,14 +38,14 @@ function transform_pinyin_tones($content)
     'v3' => '474',
     'v4' => '476'
     );
-    
+
     $vowels = array('a', 'e', 'i', 'o', 'u', 'v');
 
     foreach($r[0] as $i => $match)
     {
         $digital = $r[1][$i];
         $diacritic = $digital;
-        if(!preg_match_all('`([a-z]{1,6})([0-4])`is', $digital, $syllables)) continue;
+        if(!preg_match_all('`([a-z]{1,6})([1-4])`is', $digital, $syllables)) continue;
         foreach($syllables[0] as $k => $syllable)
         {
             $s = $syllables[1][$k];
@@ -56,10 +56,10 @@ function transform_pinyin_tones($content)
             }
             elseif(preg_match('`ou`', $s, $r2))
             {
-                $s = preg_replace('`ou`i', '&#'.$tones['o'.$t].';u', $s);                
+                $s = preg_replace('`ou`i', '&#'.$tones['o'.$t].';u', $s);
             }
             else
-            {                
+            {
                 for($j=strlen($s)-1;$j;$j--)
                 {
                     if(in_array($s[$j], $vowels))
@@ -67,13 +67,13 @@ function transform_pinyin_tones($content)
                         $s = str_replace($s[$j], '&#'.$tones[$s[$j].$t].';', $s);
                         break;
                     }
-                    
-                }                
+
+                }
             }
-            
+
             $diacritic = str_replace($syllable, $s, $diacritic);
         }
-        
+
         $content = str_replace($match, $diacritic, $content);
     }
     return $content;
