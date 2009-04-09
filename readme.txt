@@ -12,6 +12,8 @@ This is a small plugin allowing you to turn digital pinyin notation (Chinese tra
 
 This is a small WordPress plugin allowing you to turn digital pinyin notation (Chinese transliteration standard) into a diacritic one. It turns out to be very useful if you type chinese grammar lessons.
 
+For example, "Wo3 shi4 Mei3guo2 ren2" turns into "W&#466; sh&#236; M&#283;igu&#243; r&#233;n".
+
 == Installation ==
 
 1. Unzip `pinyin-tones.zip` into `/pinyin-tones/` directory
