@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Pinying Tones
+Plugin Name: Pinyin Tones
 Plugin URI: http://somemilk.org/pinyin-tones-plugin/
 Description: Transforms digital pinyin tone notation into diacritic marks
-Version: 1.0.0
+Version: 1.0.1
 Author: Andrey Kravchuk
 Author URI: http://somemilk.org/
 */
@@ -80,5 +80,8 @@ function transform_pinyin_tones($content)
 }
 
 add_filter('the_content', 'transform_pinyin_tones');
+add_filter('the_title', 'transform_pinyin_tones');
+add_filter('the_excerpt', 'transform_pinyin_tones');
+add_filter('comment_text', 'transform_pinyin_tones');
 
 ?>
