@@ -81,6 +81,7 @@ function transform_pinyin_tones($content)
 
 add_filter('the_content', 'transform_pinyin_tones');
 add_filter('the_title', 'transform_pinyin_tones');
+add_filter('single_post_title', 'transform_pinyin_tones');
 add_filter('the_excerpt', 'transform_pinyin_tones');
 add_filter('comment_text', 'transform_pinyin_tones');
 
