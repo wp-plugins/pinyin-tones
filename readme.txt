@@ -3,7 +3,7 @@ Contributors: somemilk
 Donate link: http://somemilk.org/pinyin-tones-plugin/
 Tags: pinyin, chinese, mandarin
 Requires at least: 2.7
-Tested up to: 2.7
+Tested up to: 4.1
 Stable tag: trunk
 
 This is a small plugin allowing you to turn digital pinyin notation (Chinese transliteration standard) into a diacritic one.

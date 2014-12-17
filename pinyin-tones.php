@@ -3,7 +3,7 @@
 Plugin Name: Pinyin Tones
 Plugin URI: http://somemilk.org/pinyin-tones-plugin/
 Description: Transforms digital pinyin tone notation into diacritic marks
-Version: 1.0.1
+Version: 1.0.2
 Author: Andrey Kravchuk
 Author URI: http://somemilk.org/
 */
